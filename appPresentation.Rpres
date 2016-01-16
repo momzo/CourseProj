@@ -1,0 +1,44 @@
+Shiny Application Presentation
+===================================
+author: Richard Ian Carpenter
+date: 16 Jan 2016
+
+Shiny App Introduction
+===============================
+This Shiny App was developed as a result of a series of discussions that took place in the forums of the Statistical Inference and Machine Learning courses.  The unresoved issue was focused on selecting model parameters and finding the "best" model.
+
+- The app uses the `mtcars` dataset and allows the user to define both the dependent and independent variables in a linear model (`lm()`) regression.
+- The regressions results appear in the same manner as they would if the `summary()` function were used along with the regression.
+
+Shiny App Introduction, continued
+========================================
+- A plot using the selected variables is also generated, plotting the dependent variable along the y-axis, the independent variable(s) along the x-axis, and the regression line "fitted" among the scatter plot of points. 
+- An example of the output is contained in the remaining slides.
+- Additional comments and some unused code are commented out in the `ui.R` and `server.R` files.
+- My Shiny app can be found here: <br>https://richard-ian-carpenter.shinyapps.io/CourseProj/
+- My GitHub repository can be found here: <br>https://github.com/richard-ian-carpenter/CourseProj
+
+
+Example Regression Table Output
+========================================================
+Here is an example of a regression using the `mtcars` dataset:
+<small><small>
+```{r, echo = FALSE}
+summary(lm(qsec ~ hp, data = mtcars))
+```
+</small></small>
+
+Example Regression Plot Output
+========================================================
+Here is the example regression plot output, created using **ggplot2**:
+
+```{r, echo=FALSE, fig.width=8, fig.height=4.5, dpi=300, out.width="1920px", height="1080px"}
+library(ggplot2)
+p <- ggplot(mtcars, aes(x = hp, y = qsec))
+p <- p + geom_point(size = 3) +
+    geom_smooth(method = "lm", se = FALSE) +
+    theme(panel.grid.major = element_line("grey"),
+          panel.grid.minor = element_blank(),
+          panel.background = element_rect("white"))
+print(p)
+```

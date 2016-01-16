@@ -3,7 +3,7 @@
 #
 #  Author: Richard Ian Carpenter
 #  Date Created: 14 Dec 2015
-#  Data Updated: 09 Jan 2016
+#  Data Updated: 16 Jan 2016
 #
 ## NOTES: 
 #
@@ -65,9 +65,10 @@ server <- (function(input, output) {
                         
                         p <- p + geom_point(size = 3) +
                                     geom_smooth(method = "lm", se = FALSE) +
-                                    theme(panel.grid.major = element_line("grey"),
+                                    theme(panel.grid.major = element_line("black"),
                                           panel.grid.minor = element_blank(),
-                                          panel.background = element_rect("white"))
+                                          panel.background = element_rect("white"),
+                                          axis.text = element_text(colour = "black"))
                             
                         print(p)
                         

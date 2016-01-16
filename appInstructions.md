@@ -1,11 +1,9 @@
-# ShinyApp Introduction
+# ShinyApp Instructions
 Author: Richard Ian Carpenter  
 Date Created: 14 Dec 2015
-Date Updated: 09 Jan 2016  
+Date Updated: 16 Jan 2016  
 
-**Application Introduction and Instructions**
-
-This Shiny application was built using the `mtcars` dataset that is available in **R**.  The inspiration for this shinyapp came from the discussion that took place in the Statistical Inference course forums concerning the regression output and variable selection.
+**Application Instructions**
 
 Choose the dependent variable from the drop down box and the independent variable(s) by checking the box next to their names.  In the `Regression Summary` tab, you will find the linear regression output in a table, just as you would in **R**.
 
@@ -35,6 +33,8 @@ am ...... Transmission (0 = automatic, 1 = manual) [1] <br>
 gear .... Number of forward gears [1] <br>
 carb .... Number of carburetors [1] <br> 
 
-**GitHub Repository Link**
+**Links**
 
 [My GitHub Repository](https://github.com/richard-ian-carpenter/CourseProj)
+
+[My Shiny Presentation](http://rpubs.com/rich_c/CourseProj)

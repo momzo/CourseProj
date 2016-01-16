@@ -3,7 +3,7 @@
 #
 #  Author: Richard Ian Carpenter
 #  Date Created: 14 Dec 2015
-#  Data Updated: 09 Jan 2016
+#  Data Updated: 16 Jan 2016
 #
 ## NOTES: 
 #
@@ -38,8 +38,8 @@ ui <- fluidPage(
       
       mainPanel(
             tabsetPanel(
-                tabPanel("Application Introduction",
-                        includeMarkdown("appIntro.md")),
+                tabPanel("Application Instructions",
+                        includeMarkdown("appInstructions.md")),
                 tabPanel("Regression Summary", 
                         verbatimTextOutput("regSummary")),
                 tabPanel("Regression Plot",
